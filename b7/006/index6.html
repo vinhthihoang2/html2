@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+        .flex-container{
+            background-color: green;
+            display: flex;
+            height: 500px;
+            align-items: center;
+        }
+
+        .flex-container>div{
+            padding: 20px;
+            font-size: 18px;
+            background-color: yellow;
+            margin: 5px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <pre>
+        Sử dụng align-seft để chỉnh sửa đè lên items trong flex-container
+    </pre>
+
+    <h1> align-seft: </h1>
+
+    <div class="flex-container">
+        <div style="align-self: stretch;">1</div>
+        <div>2</div>
+        <div style="align-self: flex-start;">3</div>
+        <div>4</div>
+        <div style="align-self: flex-end;">5</div>
+    </div>
+</body>
+</html>
