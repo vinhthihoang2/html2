@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <pre>
+        // lấy và thay đổi giá trị trong js
+        getAttribute(name)
+        setAttribute(name, value)
+    </pre>
+
+    <a id="a1" href="www.google.com" title="tìm kiếm google">Link Google</a>
+
+    <script>
+
+        document.getElementById("a1").setAttribute("href", "www.facebook.com");
+        document.getElementById("a1").setAttribute("title", "trang facebook");
+        document.getElementById("a1").innerHTML = "Liên kết Facebook";
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: green;
+            display: flex;
+            margin: 100px auto;
+            width: 800px;
+            padding: 20px;
+        }
+
+        .row {
+            margin: 20px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <label for="">A</label>
+            <input type="text" name="a" value="">
+        </div>
+
+        <div class="row">
+            <label for="">B</label>
+            <input type="text" name="b" value="">
+        </div>
+
+        <div class="row">
+            <label for="">Chọn biểu thức</label>
+            <select name="operator" id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="">Kết quả</label>
+            <input type="text" name="kq" value="">
+        </div>
+
+        <div class="row">
+            <button id="button" onclick="tinhToan()">In kết quả</button>
+        </div>
+    </div>
+
+    <script>
+        function tinhToan() {
+            // .value lấy giá trị trong input
+            var a = document.querySelectorAll("input[name = 'a']")[0].value;
+            var b = document.querySelectorAll("input[name = 'b']")[0].value;
+
+            /*
+            * document.querySelectorAll("input[name='a']")[0].value = "giá trị mới";
+            * */
+
+            var c;
+
+            var ope = document.querySelectorAll("select[name = 'operator']")[0].value;
+
+            console.log(typeof a);
+            console.log(typeof b);
+            console.log(ope);
+
+            // ép kiểu string về số
+            a = parseFloat(a);
+            b = parseFloat(b);
+
+            console.log(typeof a); // kiểm tra kiểu dữ liệu của a
+            console.log(typeof b); // kiểm tra kiểu dữ liệu của b
+
+            if (ope == "+") {
+                c = a + b;
+            } else if (ope == "-") {
+                c = a - b;
+            } else if (ope == "*") {
+                c = a * b;
+            } else if (ope == "/") {
+                c = a / b;
+            } else {
+                c = a % b; // phép chia lấy dư
+            }
+
+            
+
+            alert("Kết quả: " + c);
+        }
+    </script>
+
+</body>
+</html>
