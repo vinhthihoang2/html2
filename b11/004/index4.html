@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        {
+            var t = 1;  // var là kiểu global
+                        // sử dụng trong hay ngoài {} đều đc
+
+            let h = 2;  // let là kiểu block scope 
+                        // chỉ có thể sử dụng trong {}
+
+            console.log("h trong {}: " + h);
+        }
+
+        console.log("t: " + t);
+        console.log("h ngoài {}: " + h);
+    </script>
+    
+</body>
+</html>
