@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <pre>
+        - 3 cách gán sự kiện vào 1 thẻ trong html
+        + cách 2 : gắn vào hàm
+    </pre>
+    
+    <button id="html">Nút 1</button>
+
+    <script>
+        //gắn thông qua thuộc tính của selector
+        //hàm ko có tên thì người ta gọi là hàm vô danh
+        //hàm vô danh chỉ sử dụng 1 lần duy nhất
+
+        document.getElementById("html").onclick = function() {
+            alert("Đây là nút thông báo");
+        };
+    </script>
+</body>
+</html>

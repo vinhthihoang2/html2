@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        tự động gắn global cho biến
+    </pre>
+
+    <script>
+        
+        var a, b, c;    //khai báo ngoài hàm là toàn cục
+
+        function demo() {
+            var a = 5;
+
+            e = 1;  //gán giá trị cho 1 biến trong hàm
+                    //mà nếu biến đó chưa được khai báo
+                    //thì biến đó sẽ trở thành global
+        };
+
+        demo();
+        console.log("ngoài hàm: " + e); 
+        
+    </script>
+</body>
+</html>
