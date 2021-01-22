@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 1;
+
+        x = 2;
+
+        console.log(x);
+
+        const y = 1; //ko được gán lại giá trị biến được khai báo = từ khóa const
+        //sẽ xảy ra lỗi khi cố gán lại
+
+        y = 2;
+
+        console.log(y); //phạm vi giống hệt let & const đều là block scope
+
+        //*chú ý: tuy nhiên vẫn có thể gán lại các thuộc tính object nhỏ lẻ của biến đó
+    </script>
+</body>
+</html>

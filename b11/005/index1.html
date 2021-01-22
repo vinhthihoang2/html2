@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <pre>
+        object = {đối tượng} trong js
+    </pre>
+
+    <script>
+        var car = {type: "roud", model: "TT500", color: "green", price: 500000}
+        
+        var person = {firstName: "John", lastName: "Wick", age: 30, eyeColor: "black"};
+
+        //truy cập vào và in ra property (thuộc tính)
+        document.writeln("<br>" + car.price); //cách 1
+        document.writeln("<br>" + car["model"]);
+
+        car.price = 400000;
+
+        document.writeln("<br>" + car.price);
+
+        var person2 = {
+            firstName: "John",
+            lastName: "Cena",
+            id: 431,
+            diemToan: 10,
+            diemLy: 5,
+            diemHoa: 7,
+            diemTb: 0,
+
+        //cách tạo 1 method (phương thức)
+        
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        },
+        diemTB: function() {
+            this.diemTb = ((this.diemToan+this.diemHoa+this.diemLy)/3);
+            return this.diemTb;
+        },
+        result: function() {
+            this.diemTb = ((this.diemHoa+this.diemLy+this.diemToan)/3);
+            if (this.diemTb > 5) {
+                return "đỗ";
+            }
+            return "trượt";
+        }
+    };
+        console.log(person2.diemToan);
+        console.log(person2["diemToan"]);
+        console.log(person2.diemTB());
+        console.log(person2.result());
+    </script>
+</body>
+</html>
