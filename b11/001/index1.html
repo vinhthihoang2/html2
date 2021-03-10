@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <pre>
+        sử dụng vòng lặp duyệt mảng
+    </pre>
+    
+    <ul id="list"></ul>
+    
+    <script>
+        var cities = ["hà nội", "bắc ninh", "bắc giang", "hải phòng"];
+        var arrayLength = cities.length;
+        console.log("arrayLength");
+
+        // key trong array bắt đầu từ 0
+        var html = "";
+        for (i = 0; i < arrayLength; i++) {
+            item = "<li>" + cities[i] + "</li>";
+            console.log(item)
+            html = html + item;
+        }
+
+        console.log(html);
+        document.getElementById("list").innerHTML = html;
+    </script>
+</body>
+</html>

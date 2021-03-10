@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        call back là 1 hàm được truyền vào hàm khác như là 1 đối số
+    </pre>
+
+    <script>
+        function myDisplayer(some) {
+            console.log(some);
+        }
+
+        function myFirst(callback) {
+
+            
+            setTimeout(function() {
+                myDisplayer("Hello");
+
+                callback();
+                //mySecond
+            }, 5000);
+        }
+        
+        function mySecond() {
+            myDisplayer("Goodbye");
+        }
+
+        //gọi lần 1
+        myFirst(mySecond);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <pre>
+        Một callback là hàm được truyền vào như là đối số tới hàm khác
+        Công nghệ này cho phép một hàm có thể gọi hàm khác 
+        Hàm callback có thể được chạy sau khi hàm gọi hàm callback đã chạy xong
+    
+        setTimeout(function, milliseconds)
+        thực thi 1 hàm sau khi đã đợi X milliseconds
+    </pre>
+    
+    <script>
+        setTimeout(function() {
+            alert("Đã qua 5s");
+        }, 5000);
+
+    </script>
+</body>
+</html>

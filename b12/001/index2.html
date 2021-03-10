@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Arrow Function</h1>
+    <pre>
+        hàm mũi tên
+        ưu điểm: ngắn gọn hơn hàm thông thường
+    </pre>
+
+    <script>
+        demo2 = () => {
+            document.write("Nội dung của hàm");
+        }
+
+        demo2(); //gọi hàm
+
+        //hàm tính tổng
+        tinhtong = (a, b) => {
+            var c;
+            c = a + b;
+            return c;
+        }
+        var kq = tinhtong(2, 3);
+        document.write("<br>" + kq);
+    </script>
+</body>
+</html>
